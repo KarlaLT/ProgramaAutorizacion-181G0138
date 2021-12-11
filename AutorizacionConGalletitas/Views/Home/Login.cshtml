@@ -1,0 +1,26 @@
+﻿<html>
+<head>
+    <title>Identificate</title>
+</head>
+<body>
+    <form asp-action="Login" method="post">
+        @*<label>Rol</label><br />
+        <select name="rol">
+            <option value="user">Usuario</option>
+            <option value="admin">Administrador</option>
+            <option value="">Publico</option>
+        </select>*@
+
+        <label>Ingresa tu nombre de usuario:</label><br />
+        <input name="user" required type="text"/><br />
+        <label>Ingresa tu contraseña:</label><br />
+        <input name="password" required type="text"/><br />
+        <input type="submit" value="Entrar" /><br />
+        <a asp-action="Publico">No tengo cuenta, entrar como público</a>
+        <br />
+        <p>
+            @Html.ValidationSummary();
+        </p>
+    </form>
+</body>
+</html>
